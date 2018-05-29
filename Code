@@ -1,0 +1,24 @@
+//Below the Main Method
+private static void ExceptionTest()
+        {
+            StreamReader sr = null;
+            try
+            {
+                sr = File.OpenText(@"c:\Users\seamgre\Desktop\New Text Document.txt"); //This should be a different file name from your computer
+                Console.WriteLine(sr.ReadToEnd());
+                Console.ReadLine();
+            }
+            catch (FileNotFoundException fnfe)
+            {
+                Console.WriteLine(fnfe.Message);
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.ReadLine();
+            }
+            
+        }
+        //Add "using System.IO;" to the top of it
+        //Add a data file and use the path instead of my file path
